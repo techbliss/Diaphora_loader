@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TabWidget</class>
+ <widget class="QTabWidget" name="TabWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Diaphora BinDiffing Tool</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget { 
+	background-color: #363636;
+	color: #ddd;
+}
+
+QCheckBox {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+QTextEdit {
+	background-color: #2d2d2d;
+	border: 1px solid #363636;
+}
+
+QMenuBar, QMenuBar::item {
+	background-color: #444444;
+	color: #ddd;
+}
+
+QLineEdit {
+	border: 1px solid #474747;
+	min-height: 20px;
+}
+
+QLineEdit:hover, QLineEdit:focus {
+	border: 1px solid #00aaaa;	
+}
+
+QTabBar::tab {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #555555, stop: 1 #444444);
+}
+
+QTabBar::tab:selected {
+	background-color: #777777;
+}
+
+QTreeView::item {
+	font-size: 8px;
+}
+
+QHeaderView::section {
+	background-color: #444;
+	border-left: 3px solid #666;
+
+}
+
+QTableView {
+	border: 1px solid #474747;
+}
+
+QTableView {
+	background-color: #2d2d2d;
+}
+
+IDAView, hexview_t, CustomIDAMemo {
+	font-family: &quot;Consolas&quot;;
+	font-size: 9pt;
+	border: none;
+}
+
+QScrollBar {
+	background-color: #363636;
+	width: 20px;
+	margin: 0 0 0 0;
+}
+
+QScrollBar::sub-line, QScrollBar::add-line {
+	background: none;
+}
+
+/*
+QScrollBar:horizontal {
+	padding: 0 20px 0 20px;
+}
+
+QScrollBar:vertical {
+	padding: 20px 0 20px 0;
+}
+
+QScrollBar::add-line:vertical {
+	image: url(%down-arrow.png%);
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+    height: 20px;
+}
+
+QScrollBar::sub-line:vertical {
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+    height: 20px;
+}
+
+QScrollBar::add-line:horizontal {
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+    width: 20px;
+}
+
+QScrollBar::sub-line:horizontal {
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+    width: 20px;
+}*/
+
+QScrollBar::add-page, QScrollBar::sub-page {
+	background: none;
+}
+
+QScrollBar::handle:vertical {
+	min-height: 20px;
+}
+
+QScrollBar::handle:horizontal {
+	min-width: 20px;
+}
+
+QScrollBar::handle {
+	background-color: #585858;
+	margin: 3px;
+	border-radius: 7px;
+}
+
+QToolBar {
+	border: none;
+}
+
+QPushButton {
+	border: 1px solid #077;
+	text-align: center;
+	min-height: 20px;
+	min-width: 50px;
+	
+	padding: 0 6px 0 6px;
+}
+
+QPushButton:hover {
+	border: 1px solid #0aa;
+}
+
+QPushButton::text {
+	background-color: red;
+}
+
+QComboBox {
+	border: 1px solid #474747;
+}
+
+GraphQObject {
+	background-color: red;
+	padding: 100px;
+}
+
+ChooserContainer {
+	border: 1px solid green;
+	border-radius: 4px;
+}
+
+QPushButton {
+color: #333;
+border: 2px solid #555;
+border-radius: 6px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #888);
+min-width: 80px;
+}
+ 
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #bbb);
+}
+ 
+QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.35, stop: 0 #fff, stop: 1 #ddd);
+}
+</string>
+  </property>
+  <property name="currentIndex">
+   <number>0</number>
+  </property>
+  <widget class="QWidget" name="tab">
+   <attribute name="title">
+    <string>Run Plugin</string>
+   </attribute>
+   <widget class="QPushButton" name="bt_Launch">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>100</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Launch Diaphora plugin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Launch Diaphora</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="tab">
+   <attribute name="title">
+    <string>Help</string>
+   </attribute>
+   <widget class="QPushButton" name="bt_Inbrow">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>80</y>
+      <width>94</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open in Browser&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Doc html</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_Inword">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>120</y>
+      <width>94</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open in Word&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Doc Word</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_Pdf">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>160</y>
+      <width>94</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open in with adobe reader&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Doc Pdf</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="tab_2">
+   <attribute name="title">
+    <string>Author</string>
+   </attribute>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_Githubs">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>32</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>diaphora github</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_Intieets">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>80</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Twitter</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_Inbloogs">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>130</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Blog</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Visit Github</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> Joxean on Twitter</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> Joxean Koret Blog</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
