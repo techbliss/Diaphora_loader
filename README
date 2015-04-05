@@ -6,6 +6,12 @@ https://github.com/joxeankoret/diaphora
 
 HOW TO!
 Extract archive to ida pro folder
+
+Overwriting plugins folder
+It should be like
+idafolder\plugins
+idafolder\QtApps\diaphora
+
 then
 Download Diaphora from above link, and extract the content of the archive to QtApps\diaphora matching folder
 
