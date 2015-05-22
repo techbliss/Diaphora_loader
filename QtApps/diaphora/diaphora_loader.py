@@ -317,7 +317,7 @@ class Ui_TabWidget(object):
         webbrowser.open(idahome + '\\doc\\diaphora_help.pdf')
 
     def sesami5(self):
-        idaapi.open_url('http://github.com')
+        idaapi.open_url('https://github.com/joxeankoret/diaphora')
 
     def sesami6(self):
         idaapi.open_url('https://twitter.com/matalaz')
